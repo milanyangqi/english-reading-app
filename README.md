@@ -21,10 +21,49 @@
 
 ## 使用方法
 
+### 本地开发
+
 1. 克隆项目到本地
 2. 安装依赖：`npm install`
 3. 启动开发服务器：`npm start`
 4. 在浏览器中访问：`http://localhost:3000`
+
+### Docker部署
+
+#### 方法一：使用Docker Compose（推荐）
+
+1. 克隆项目到服务器：
+   ```bash
+   git clone https://github.com/milanyangqi/english-reading-app.git
+   cd english-reading-app
+   ```
+
+2. 使用Docker Compose构建并启动容器：
+   ```bash
+   docker-compose up -d
+   ```
+
+3. 在浏览器中访问：`http://服务器IP`
+
+#### 方法二：使用Docker命令
+
+1. 克隆项目到服务器：
+   ```bash
+   git clone https://github.com/milanyangqi/english-reading-app.git
+   cd english-reading-app
+   ```
+
+2. 构建Docker镜像：
+   ```bash
+   docker build -t english-reading-app .
+   ```
+
+3. 运行Docker容器：
+   ```bash
+   docker run -d -p 80:80 --name english-reading-app english-reading-app
+   ```
+
+4. 在浏览器中访问：`http://服务器IP`
 
 ## 如何使用
 

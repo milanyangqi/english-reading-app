@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  english-reading-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: english-reading-app
+    ports:
+      - "80:80"
+    restart: unless-stopped
